@@ -1,0 +1,588 @@
+ *{
+  margin: 0;
+  padding: 0;
+  
+ }
+
+
+
+/* Adjustments to other elements */
+
+ html {
+  scroll-behavior: smooth;
+}
+ /* .smallscreen {
+  @media screen and (max-width: 640px) {
+    max-width: 100%;
+  }
+ } */
+ body ,html{
+width: 100%;
+height: 100%;
+ }
+ 
+ body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden!important;
+  height: 100vh;
+}
+
+/* Base styles for all screen sizes */
+.box1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubble {
+  position: relative;
+  display: flex;
+}
+
+.bubble span:nth-child(even) {
+  background: #0b609c;
+  box-shadow: 0 0 0 10px #0b609c44, 0 0 50px #0b609c, 0 0 100px #0b609c;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+/* Breakpoint for Small Devices (phones) */
+@media screen and (max-width: 576px) {
+  .bubble span {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100%; /* Maintain circular shape */
+    background: #fcfcfc; /* Set background color */
+    box-shadow: 0 0 0 10px #fcfcfc44, 0 0 50px #fcfcfc, 0 0 100px #ffffff; /* Adjust box-shadow */
+  }
+
+  .bubble span:nth-child(even) {
+    background: #f1edf5; /* Set background color for even bubbles */
+    box-shadow: 0 0 0 10px #6929a944, 0 0 50px #fcfcfc, 0 0 100px #ffffff; /* Adjust box-shadow */
+  }
+}
+
+/* Breakpoint for Medium Devices (tablets) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .bubble span {
+    width: 15px;
+    height: 15px;
+  }
+  
+}
+/* Breakpoint for Large Devices (small laptops) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .bubble span {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Breakpoint for Extra Large Devices (large laptops and desktops) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .bubble span {
+    width: 18px;
+    height: 18px;
+      position: relative;
+      background: #8640c4;
+      margin: 0 4px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 10px #8640c444, 0 0 50px #fcfcfc, 0 0 100px #0b609c;
+      animation: animate 15s linear infinite;
+    
+  }
+}
+
+/* Breakpoint for Extra Extra Large Devices (extra large desktops) */
+@media screen and (min-width: 1201px) {
+  .bubble span {
+    width: 20px;
+    height: 20px;
+      position: relative;
+      background: #8640c4;
+      margin: 0 4px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 10px #8640c444, 0 0 50px #fcfcfc, 0 0 100px #0b609c;
+      animation: animate 15s linear infinite;
+    
+  }
+}
+/* For screens smaller than 768px (mobile) */
+@media only screen and (max-width: 767px) {
+  .service-slider {
+    display: none; /* Hide service-slider on mobile */
+  }
+  
+  .service-component {
+    display: block; /* Show service-component on mobile */
+  }
+}
+/* For screens larger than or equal to 768px (laptop and tablet) */
+@media only screen and (min-width: 768px) {
+  .service-slider {
+    display: block; /* Show service-slider on laptop and tablet */
+  }
+  
+  .service-component {
+    display: none; /* Hide service-component on laptop and tablet */
+  }
+}
+
+
+.line {
+  display: flex;
+  margin: 0 auto; /* This will center the element horizontally */
+  height: 6px;
+  width: 150px;
+  background-color: slateblue; /* Change this to your desired color */
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.line::before {
+  content: '';
+  position: absolute;
+  height: 100%; /* Set to 100% to fill the entire height of the parent */
+  width: 150%; /* Set wider than the parent width */
+  background-color: white; /* White color */
+  animation: moveLine 5s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes moveLine {
+  0% {
+      transform: translateX(-50%); /* Start from outside the left edge of the background */
+  }
+  100% {
+      transform: translateX(-50%); /* End at outside the right edge of the background */
+  }
+}
+
+
+/* bule line with white box  */
+.section-title-line {
+  display: flex;
+
+  margin: 0 auto; /* This will center the element horizontally */
+  height: 6px;
+  width: 260px;
+  background-color: slateblue; /* Change this to your desired color */
+  overflow: hidden;
+  border-radius: 3px;
+  position: relative;
+}
+.section-title-line::before {
+  content: '';
+  position: absolute;
+  height: 100%; /* Same as the height of the section-title-line */
+  width: 100%; /* Adjust the width as needed */
+  background-color: white; /* White color */
+  animation: moveLine 4s linear infinite;
+}
+@keyframes moveLine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%); /* Adjust this value based on the width of the line */
+  }
+}
+/* bule line with white box  */
+
+/* counter start here */
+  /* Add this to your Tailwind CSS file or component styles */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+}
+/* counter end  here */
+  
+  
+.custom-icon-color{
+  color: brown;
+}
+.custom-icon-color1{
+  color: chocolate;
+}
+.custom-icon-color2{
+  color: brown;
+}
+.custom-icon-color3{
+  color: chocolate;
+}
+.custom-icon-color4{
+  color: indigo;
+}
+.custom-icon-color5{
+  color: indigo;
+}
+.custom-icon-color6{
+  color: teal;
+}
+.custom-icon-color7{
+  color: teal;
+}
+.btn-grad:hover {
+  background-position: left bottom !important;
+}
+
+
+
+.icoons{
+  color: slateblue;
+}
+/* service btn  */
+.hexagon-container {
+  position: relative;
+  width: 150px; /* Adjust the size as needed */
+  height: 128.8px; /* Adjust the size as needed */
+  margin: 54.4px 0; /* Adjust the margin as needed */
+}
+.hexagon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: #3c90ff; /* Solid background color */
+  background-image: linear-gradient(225deg, #6A5ACD 0%, #8307ef 50%, #0b609c 100%); /* Gradient color */
+  transition: transform 0.3s ease; /* Transition for smooth animation */
+  padding: 2rem;
+}
+.text-content {
+  position: relative;
+  z-index: 1;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem; /* Adjust the font size */
+  color: #fff; /* Text color */
+  text-align: center;
+  padding: 1.5rem;
+  padding-top: 28px;
+}
+@media only screen and (max-width: 375px) {
+  .text-content {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff; /* Text color */
+    text-align: center;
+    justify-content: center;
+  }
+  .hexagon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: #3c90ff; /* Solid background color */
+    background-image: linear-gradient(225deg, #6A5ACD 0%, #8640c4 50%, #0b609c 100%); /* Gradient color */
+    transition: transform 0.3s ease; /* Transition for smooth animation */
+    padding: 4rem;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .hexagon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: #3c90ff; /* Solid background color */
+    background-image: linear-gradient(225deg, #6A5ACD 0%, #8640c4 50%, #0b609c 100%); /* Gradient color */
+    transition: transform 0.3s ease; /* Transition for smooth animation */
+    padding: 4rem;
+  }
+}
+
+
+/* For screens smaller than 768px (tablet and smaller) */
+@media screen and (width: 768px) {
+  .hexagon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: #3c90ff; /* Solid background color */
+    background-image: linear-gradient(225deg, #6A5ACD 0%, #8640c4 50%, #0b609c 100%); /* Gradient color */
+    transition: transform 0.3s ease; /* Transition for smooth animation */
+    padding: 5px;
+    width: 100px; /* Adjust the width */
+    height: 100px; /* Adjust the height */
+  }
+  .text-content {
+    position: absolute;
+    right: 1rem;
+    left: 1px;
+    z-index: 1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 16px; /* Adjust the font size */
+    color: #fff; /* Text color */
+    text-align: center;
+}
+.hexagon-container {
+  position: relative;
+  width: 100px; /* Adjust the size as needed */
+  height: 128.8px; /* Adjust the size as needed */
+  margin: 50px 0; /* Adjust the margin as needed */
+}
+}
+
+/* Hover animation */
+.hexagon-container:hover .hexagon {
+  transform: translateX(-10px); /* Adjust the distance of the slide */
+}
+.hexagon-container:hover .hexagon {
+  transform: scale(1.1); /* Adjust the scale factor as needed */
+}
+.hexagon-container .text-content .hexagon::before {
+  display: inline-block;
+  content: attr(data-content);
+  color: midnightblue;
+  transform: translateX(100%);
+  transition: transform 275ms ease;
+  text-decoration: underline;
+}
+.hexagon-container:hover .text-content .hexagon::before {
+  transform: translateX(0);
+}
+
+/* web development  */
+@media only screen and (max-width: 375px) {
+  .pointer-shape {
+  position: relative;
+  background-image: linear-gradient(225deg, #6A5ACD 0%, #8640c4 50%, #0b609c 100%); /* Gradient color */    color: white; /* Text color */
+   border-top:2px solid ;
+   border-bottom:2px solid ;
+    cursor: pointer;
+  }
+  .pointer-shape:hover {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); /* Background color on hover */
+    border-left: 12px solid ;
+  }
+  .pointer-shape:hover {
+    border-left: 12px solid #330867;
+  }
+
+}
+@media only screen and (min-width: 425px) {
+  .pointer-shape {
+    position: relative;
+    background-image: linear-gradient(225deg, #6A5ACD 0%, #8640c4 50%, #0b609c 100%); /* Gradient color */
+     /* Initial background color */
+    color: white; /* Text color */
+   border-top:1px solid ;
+   border-bottom:2px solid ;
+    cursor: pointer;
+  }
+  .pointer-shape:hover {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); /* Background color on hover */
+    border-left: 12px solid ;
+  }
+  .pointer-shape:hover {
+    border-left: 12px solid #330867;
+  }
+}
+.pointer-shape {
+  position: relative;
+  display: inline-block;
+  padding:20px 4px;
+  background-image: linear-gradient(to bottom left, #451e76, #8046e5, #6b1ec9);  /* Gradient color */
+   /* Initial background color */
+  color: white; /* Text color */
+ border-top:2px solid ;
+ border-bottom:2px solid ;
+  cursor: pointer;
+}
+.pointer-shape:hover {
+  background-image: linear-gradient(to top, #7338c5 0%, #c0acfc 100%); /* Background color on hover */
+  border-left: 12px solid ;
+}
+.pointer-shape:hover {
+  border-left: 12px solid #330867;
+
+}
+
+ 
+
+
+
+.pointer-shape:after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 38px); /* Adjust the position by subtracting half of the arrow's height */
+  left: 100%;
+  margin-bottom: 10px; /* Adjust the margin to move the arrow up or down */
+  border-top: 36px solid transparent; /* Slightly increase the size at the top */
+  border-bottom: 38px solid transparent; /* Slightly decrease the size at the bottom */
+  border-left: 28px solid slateblue; /* Adjust the color as needed */
+  transition: border-left 0.3s, top 0.3s, margin-bottom 0.3s; /* Add transitions for smooth changes */
+}
+
+.pointer-shape:hover:after {
+  border-left: 28px solid 330867;
+   /* Adjust the hover color as needed */
+   
+}
+
+/* end of web development  */
+.back{
+  background-color: #98949f;
+background-image: linear-gradient(135deg, #98949f 16%, #29adad 33%, #262090 100%);
+
+}
+/* content writing  */
+/* styles.css */
+
+/* Zoom-in effect */
+.zoom-in-effect {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center center;
+}
+
+/* Apply the zoom-in effect on hover */
+.zoom-in-effect:hover {
+  transform: scale(1.1); /* You can adjust the scale factor as needed */
+}
+
+
+
+.container {
+  position: relative;
+}
+
+.heading {
+cursor: pointer;
+background-color: #679ec3;
+background-image: linear-gradient(135deg,#7f82bf   0%,#70abd3 100%);
+
+border-bottom: none;
+}
+.googleicon{
+  color: #fff;
+
+}
+
+.paragraph {
+  
+  display: none;
+  position: absolute;
+  left: 0;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  padding: 10px;
+  width: 266px;
+  border-top: none;
+  border: 1px solid  linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+
+.heading:hover + .paragraph {
+  display: block;
+}
+/* gallery */
+
+.portfolio-item figcaption {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 10;
+  width: 100%;
+  padding: 40px;
+  background: rgba(173, 175, 215, 0.75);
+  transition: transform 0.35s;
+  transform: translate3d(0%, 100%, 0);
+}
+
+.portfolio-item:hover figcaption {
+  transform: translate3d(0, 0, 0);
+}
+/* gallery */
+
+/* slider testominals  */
+
+.swiper {
+  width: 95%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: none;
+}
+
+.swiper-slide {
+background-position: center;
+width: 200px;
+min-height: 100px;
+}
+
+.testominalicon{
+  color: yellow;
+}
+
+.testominals::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(#03a9f4, #791ee9);
+  z-index: -1;
+  transition: 0.8s;
+}
+.testominals::before{
+bottom: 0;
+border-radius: 4% 4% 4% 4%;
+
+}
+.testominals:hover::before{
+  height: 100%;
+}
+
+
+/* testominals */
+/* employee awards  */
+.testominal {
+  position: relative; /* Ensure proper positioning of ::before pseudo-element */
+  overflow: hidden; /* Prevent overflow of the gradient background */
+}
+
+.testominal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(#03a9f4, #731ee9);
+  z-index: -1;
+  transition: width 0.8s ease-in-out; /* Updated transition property */
+  transform: translateX(-50%);
+}
+
+.testominal:hover::before {
+  width: 100%;
+}
+/* ceo message */
+.ceomessage {
+ 
+  border-right: none; /* Hides the right border */
+}
