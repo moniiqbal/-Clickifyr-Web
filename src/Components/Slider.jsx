@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import background from "../assets/Untitled design.png";
 
 const BubbleContainer = () => {
   const [showVision, setShowVision] = useState(true);
@@ -16,7 +17,7 @@ const BubbleContainer = () => {
     <div id="slider relative"
       className="min-h-screen flex justify-center items-center"
       style={{
-        backgroundImage: `url('/images/Untitled design.png')`,
+        backgroundImage: $`url(${background})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
