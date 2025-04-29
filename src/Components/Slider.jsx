@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import background from "../assets/Untitled design.png";
+import background from "../assets/images/Unititled design.png";
 
 const BubbleContainer = () => {
   const [showVision, setShowVision] = useState(true);
