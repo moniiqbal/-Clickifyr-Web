@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import Home from './Components/Home';
 import Header from './Components/Header';
@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="slider" component={Slider} />
+          <Route path="slider" element={<Slider />} />
           <Route path='header' element={<Header />} />
           <Route path='footer' element={<Footer />} />
           <Route path='about' element={<About />} />
